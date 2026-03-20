@@ -1,10 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>WordChain Destek</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordChain - Kelime Öğrenmenin Yeni Yolu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f3e8ff',
+                            100: '#e9d5ff',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            900: '#581c87',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a855f7, #581c87);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #f3e8ff 0%, #ffffff 100%);
+        }
+    </style>
 </head>
-<body>
-    <h1>WordChain Uygulama Destek Sayfası</h1>
-    <p>Geliştirici ile iletişime geçmek için: merisoftb1@gmail.com</p>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        W
+                    </div>
+                    <span class="font-bold text-2xl text-gray-900">WordChain</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#nasil-calisir" class="text-gray-600 hover:text-brand-600 transition-colors font-medium">Nasıl Çalışır?</a>
+                    <a href="#ozellikler" class="text-gray-600 hover:text-brand-600 transition-colors font-medium">Özellikler</a>
+                    <a href="#iletisim" class="text-gray-600 hover:text-brand-600 transition-colors font-medium">İletişim</a>
+                </div>
+                <div>
+                    <a href="#indir" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg">
+                        Hemen İndir
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left z-10">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold mb-6">
+                        🚀 Yeni Nesil Kelime Öğrenme
+                    </span>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        Kelimeleri <span class="gradient-text">Zincirleme</span> Mantığıyla Öğrenin
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        WordChain, kelime dağarcığınızı bir "Teknoloji Ağacı" (Tech Tree) mantığıyla geliştirmenizi sağlayan yenilikçi bir dil öğrenme uygulamasıdır. Kelimeleri birbirine bağlayarak kalıcı hafızanıza kazıyın.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#indir" class="flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-lg">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-xs opacity-80">Google Play'den</div>
+                                <div class="text-sm font-bold">Hemen İndirin</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <!-- App Mockup Placeholder -->
+                    <div class="relative mx-auto w-[300px] h-[600px] bg-white rounded-[3rem] border-[8px] border-gray-900 shadow-2xl overflow-hidden">
+                        <div class="absolute top-0 inset-x-0 h-6 bg-gray-900 rounded-b-3xl w-40 mx-auto"></div>
+                        <div class="w-full h-full bg-brand-50 flex flex-col items-center pt-12 px-6">
+                            <div class="w-full bg-white p-4 rounded-2xl shadow-sm mb-4 border border-brand-100">
+                                <div class="text-brand-600 text-sm font-bold mb-1">Seviye 1</div>
+                                <div class="text-2xl font-bold">Hello</div>
+                                <div class="text-gray-500 text-sm mt-1">Merhaba</div>
+                            </div>
+                            <div class="h-8 w-1 bg-brand-200"></div>
+                            <div class="w-full bg-white p-4 rounded-2xl shadow-sm my-4 border border-brand-100">
+                                <div class="text-brand-600 text-sm font-bold mb-1">Seviye 2</div>
+                                <div class="text-2xl font-bold">Welcome</div>
+                                <div class="text-gray-500 text-sm mt-1">Hoşgeldiniz</div>
+                            </div>
+                            <div class="h-8 w-1 bg-brand-200"></div>
+                            <div class="w-full bg-white p-4 rounded-2xl shadow-sm mt-4 border border-brand-100 opacity-50">
+                                <div class="text-gray-400 text-sm font-bold mb-1">Kilitli</div>
+                                <div class="text-xl font-bold text-gray-400">Greeting</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative blobs -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/20 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="nasil-calisir" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Uygulama Mantığı</h2>
+                <p class="text-gray-600 text-lg">WordChain, ezberlemek yerine kelimeler arası anlamsal ve yapısal bağlar kurarak öğrenmenizi sağlar.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Teknoloji Ağacı (Tech Tree)</h3>
+                    <p class="text-gray-600">Oyunlardaki yetenek ağaçları gibi, temel kelimeleri öğrendikçe daha karmaşık ve ilişkili kelimelerin kilidini açarsınız.</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Zincirleme Öğrenme</h3>
+                    <p class="text-gray-600">Her yeni kelime, daha önce öğrendiğiniz bir kelimeyle bağlantılıdır. Bu sayede beyniniz yeni bilgiyi var olanla eşleştirir.</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kalıcı Hafıza</h3>
+                    <p class="text-gray-600">Akıllı tekrar sistemi ve görsel bağlam sayesinde kelimeler kısa süreli hafızadan uzun süreli hafızaya aktarılır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="ozellikler" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sizi Başarıya Götüren Özellikler</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-600 shadow-sm shrink-0">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Doğru Telaffuz (TTS)</h4>
+                                <p class="text-gray-600">Google TTS entegrasyonu ile kelimelerin doğru okunuşlarını anında dinleyin ve pratik yapın.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-600 shadow-sm shrink-0">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Google Drive Yedekleme</h4>
+                                <p class="text-gray-600">İlerlemeniz asla kaybolmaz. Tüm verilerinizi güvenle buluta yedekleyin ve cihazlar arası senkronize edin.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-600 shadow-sm shrink-0">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Kişiselleştirilmiş İlerleme</h4>
+                                <p class="text-gray-600">Seviye testi ile size en uygun noktadan başlayın ve kendi hızınızda ilerleyin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-full bg-brand-100 absolute -inset-4 blur-3xl opacity-50"></div>
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Learning Concept" class="rounded-2xl shadow-2xl relative z-10 object-cover h-[500px] w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="indir" class="py-20 bg-brand-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-600 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-500 rounded-full blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Kelime Zincirinizi Oluşturmaya Başlayın</h2>
+            <p class="text-brand-100 text-lg mb-10 max-w-2xl mx-auto">
+                Hemen indirin ve kelime öğrenmenin en eğlenceli ve kalıcı yoluyla tanışın. İlk zincirinizi bugün kurun!
+            </p>
+            <a href="#" class="inline-flex items-center justify-center gap-2 bg-white text-brand-900 px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105 shadow-xl">
+                <i class="fab fa-google-play text-2xl"></i>
+                Google Play'den İndir
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="iletisim" class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold shadow-lg">
+                            W
+                        </div>
+                        <span class="font-bold text-xl text-white">WordChain</span>
+                    </div>
+                    <p class="mb-4">Vocabulary Tech Tree App - Kelime öğrenmenin yeni nesil yolu.</p>
+                </div>
+                <div class="md:text-right">
+                    <h4 class="text-white font-bold mb-4">İletişim & Destek</h4>
+                    <a href="mailto:merisoftb1@gmail.com" class="hover:text-white transition-colors flex items-center md:justify-end gap-2">
+                        <i class="fas fa-envelope"></i> merisoftb1@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2026 WordChain. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
